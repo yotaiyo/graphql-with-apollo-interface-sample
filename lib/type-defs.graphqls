@@ -6,4 +6,32 @@ type User {
 
 type Query {
   viewer: User!
+  companyPageLayout(id: ID!): CompanyPageLayout
+}
+
+type CompanyPageLayout {
+  id: ID!
+  companyInfos: [CompanyInfo!]!
+}
+
+interface CompanyInfo {
+  id: ID!
+}
+
+type Product implements CompanyInfo {
+  id: ID!
+  title: String!
+  url: String!
+}
+
+type Officer implements CompanyInfo {
+  id: ID!
+  firstName: String!
+  lastName: String!
+}
+
+type QuestionAndAnswer implements CompanyInfo {
+  id: ID!
+  question: String!
+  answer: String!
 }
