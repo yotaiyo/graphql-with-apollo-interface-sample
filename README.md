@@ -1,4 +1,4 @@
-# graphql-with-apollo-implements-sample
+# graphql-with-apollo-interface-sample
 
 ## sample query
 ```
